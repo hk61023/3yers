@@ -6,6 +6,7 @@
 - 修改玩法前阅读 `GAME_PLAN.md`；场景接口与交互约定见 `src/game/README.md` 和 `src/game/sceneTypes.ts`。以当前实现和用户最新要求判断历史规划是否仍适用。
 - 前端是 React、TypeScript、Vite；静态资源在 `public/`。独立访问统计服务位于 `backend/`，使用 Flask、Gunicorn、SQLite。涉及统计、认证或服务安装时先读 `backend/README.md`。
 - 根据任务范围修改文件。仅在明确要求提交、推送、部署或并行代理工作时执行相应操作；已有授权范围内继续完成验证，无需重复确认。
+- GitHub后续更新仅推送 `hk61023/3yers`（当前remote为 `secondary`）；不再更新 `386349036/car_game`（`origin`）。保留旧remote作历史参考，不向其推送、创建PR或发布。
 
 ## 儿童玩法与场景
 
