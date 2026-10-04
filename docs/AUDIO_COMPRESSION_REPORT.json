@@ -1,0 +1,152 @@
+[
+  {
+    "file": "public/audio/bgm/country-farm-day.mp3",
+    "duration_seconds": 161.045,
+    "before_bytes": 2591162,
+    "after_bytes": 805796,
+    "bitrate_kbps": 40,
+    "sample_rate": 24000,
+    "channels": 2,
+    "sha256": "c0c8ca859fe26af00d9295d1c9da9372723a278f38fb4ce66b97eab0fa9a5462"
+  },
+  {
+    "file": "public/audio/bgm/cozy-winter-village.mp3",
+    "duration_seconds": 177.024,
+    "before_bytes": 2846525,
+    "after_bytes": 885596,
+    "bitrate_kbps": 40,
+    "sample_rate": 24000,
+    "channels": 2,
+    "sha256": "9aaf9326d20a20d5c85449a1b9c77a12a393d7e94a94e93910c08205ed5b3f79"
+  },
+  {
+    "file": "public/audio/bgm/fairytale-world-homepage-theme.mp3",
+    "duration_seconds": 162.24,
+    "before_bytes": 2609992,
+    "after_bytes": 811676,
+    "bitrate_kbps": 40,
+    "sample_rate": 24000,
+    "channels": 2,
+    "sha256": "b6a4e6f7bf535710cc8ff9d258a2ef910c969e38ce282b8901a6ff01f9b075cf"
+  },
+  {
+    "file": "public/audio/bgm/floating-with-friends.mp3",
+    "duration_seconds": 180.096,
+    "before_bytes": 2895679,
+    "after_bytes": 900956,
+    "bitrate_kbps": 40,
+    "sample_rate": 24000,
+    "channels": 2,
+    "sha256": "1eb7426af168aa4564fc96192fd64c93d7e0c787bfb94a30dced5ca0c5a9d427"
+  },
+  {
+    "file": "public/audio/bgm/friendly-dinosaur-valley.mp3",
+    "duration_seconds": 180.885,
+    "before_bytes": 2908354,
+    "after_bytes": 904916,
+    "bitrate_kbps": 40,
+    "sample_rate": 24000,
+    "channels": 2,
+    "sha256": "2d07a6171afcba9abd2c5471cc7bfc8ef40ad1d75c490df73cc9689794eec5b8"
+  },
+  {
+    "file": "public/audio/bgm/happy-helper-car.mp3",
+    "duration_seconds": 178.261,
+    "before_bytes": 2866490,
+    "after_bytes": 891836,
+    "bitrate_kbps": 40,
+    "sample_rate": 24000,
+    "channels": 2,
+    "sha256": "04953deb1b2fa5e23ee9b092f147e8eaa68cc23421005b99e812173bb39f248a"
+  },
+  {
+    "file": "public/audio/bgm/little-animal-friends.mp3",
+    "duration_seconds": 179.093,
+    "before_bytes": 2879935,
+    "after_bytes": 896036,
+    "bitrate_kbps": 40,
+    "sample_rate": 24000,
+    "channels": 2,
+    "sha256": "d819580df3a4f8cbbf1257084f668b2f10c86065536f9dfa6010533f403a0acc"
+  },
+  {
+    "file": "public/audio/bgm/magical-garden-dreams.mp3",
+    "duration_seconds": 178.816,
+    "before_bytes": 2875327,
+    "after_bytes": 894596,
+    "bitrate_kbps": 40,
+    "sample_rate": 24000,
+    "channels": 2,
+    "sha256": "04890151ee2651221bf2bc9b1df0092cff75b28f2c881b889af5c3bb78aa0120"
+  },
+  {
+    "file": "public/audio/bgm/rhythm-and-melodies.mp3",
+    "duration_seconds": 160.64,
+    "before_bytes": 2584635,
+    "after_bytes": 803756,
+    "bitrate_kbps": 40,
+    "sample_rate": 24000,
+    "channels": 2,
+    "sha256": "e3c459085418c861799e87cc5ee63cea0e9ba5aacbebab6436eb595b52c8824d"
+  },
+  {
+    "file": "public/audio/bgm/starry-sky-spaceship-journey.mp3",
+    "duration_seconds": 177.813,
+    "before_bytes": 2859206,
+    "after_bytes": 889556,
+    "bitrate_kbps": 40,
+    "sample_rate": 24000,
+    "channels": 2,
+    "sha256": "efa13268d97ab19156bdadf09db78ebab200563ef7c5cd856ae337f52ec00c21"
+  },
+  {
+    "file": "public/audio/bgm/visiting-the-star-friends.mp3",
+    "duration_seconds": 178.453,
+    "before_bytes": 2869571,
+    "after_bytes": 892796,
+    "bitrate_kbps": 40,
+    "sample_rate": 24000,
+    "channels": 2,
+    "sha256": "834245dc14942d064794ad65d9c1fa82ae88c27ade8a4384ec644393598c3e6c"
+  },
+  {
+    "file": "public/audio/bgm/warm-little-moments.mp3",
+    "duration_seconds": 177.835,
+    "before_bytes": 2859581,
+    "after_bytes": 889676,
+    "bitrate_kbps": 40,
+    "sample_rate": 24000,
+    "channels": 2,
+    "sha256": "9b3ef5908620f720897f6081c1ac1610f401249b9e477bea5edbf97525809c7e"
+  },
+  {
+    "file": "public/audio/bgm/whales-pearl-journey.mp3",
+    "duration_seconds": 177.792,
+    "before_bytes": 2858815,
+    "after_bytes": 889436,
+    "bitrate_kbps": 40,
+    "sample_rate": 24000,
+    "channels": 2,
+    "sha256": "75977fef25d8ba636994584804840d8c4cf2d510a2d40e895ff77c999267f990"
+  },
+  {
+    "file": "public/audio/bgm/wonderland-adventure-menu.mp3",
+    "duration_seconds": 176.64,
+    "before_bytes": 2840387,
+    "after_bytes": 883676,
+    "bitrate_kbps": 40,
+    "sample_rate": 24000,
+    "channels": 2,
+    "sha256": "f3b0644bec7d6cce75bdb8ab040c3ef4b6f8319ff6e106eb6a0a8b3e11d3032b"
+  },
+  {
+    "file": "public/audio/bgm/woodland-friends-gathering.mp3",
+    "duration_seconds": 178.027,
+    "before_bytes": 2862660,
+    "after_bytes": 890636,
+    "bitrate_kbps": 40,
+    "sample_rate": 24000,
+    "channels": 2,
+    "sha256": "9ef0426ccca90199dbc1d62153d2e0d375932d245b90dccb14301a6d1421312b"
+  }
+]

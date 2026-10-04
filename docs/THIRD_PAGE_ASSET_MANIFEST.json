@@ -1,0 +1,530 @@
+{
+  "tool": "built-in imagegen",
+  "exporter": "scripts/export-adventure-assets.py",
+  "notes": "原始绘图文件名用于追溯；运行时仅使用public中的WebP。cleanup编辑移除重复角色与道具，sleep-state补全盖被前后画面。",
+  "generations": [
+    {
+      "id": "forest-atlas",
+      "source": "exec-4a762578-0bdd-4b3a-87c6-7b7bcb751f06.png",
+      "prompt": "Create ONE transparent sprite sheet asset for gentle preschool watercolor storybook web game. Square 2048x2048 canvas, exact 4 columns by 4 rows of equal cells, each isolated sprite centered fully inside its cell with generous 18% empty transparent padding. No cells, grid lines, labels, text, background, shadows extending between cells. Consistent warm hand-painted watercolor, rounded plush characters, readable at small size. Rabbit has ivory fur long ears coral scarf; bear honey brown round ears cream vest. Items in strict row-major order: 1. friendly squirrel standing; 2. same squirrel waving; 3. round hedgehog standing; 4. same hedgehog eating apple with content closed eyes; 5. open wicker picnic basket; 6. same basket closed; 7. one large broad green leaf; 8. folded gingham picnic blanket; 9. open gingham picnic mat; 10. one apple slice; 11. cream floral cup; 12. empty lunchbox; 13. large pink flower bud; 14. same pink flower opened; 15. blue songbird perched on tiny branch; 16. yellow butterfly. All 16 objects independent on genuine alpha transparency. Each item must fit its own cell, no touching adjoining items.",
+      "transparent": true,
+      "stage": "initial"
+    },
+    {
+      "id": "snow-atlas",
+      "source": "exec-ae697fc5-4b8c-466e-b151-89b40af7ed91.png",
+      "prompt": "Create ONE transparent sprite sheet asset for gentle preschool watercolor storybook web game. Square 2048x2048 canvas, exact 4 columns by 4 rows of equal cells, each isolated sprite centered fully inside its cell with generous 18% empty transparent padding. No cells, grid lines, labels, text, background, shadows extending between cells. Consistent warm hand-painted watercolor, rounded plush characters, readable at small size. Rabbit has ivory fur long ears coral scarf; bear honey brown round ears cream vest. Items in strict row-major order: 1. ivory rabbit coral scarf winter coat standing; 2. same winter rabbit waving; 3. honey bear cream vest blue winter coat standing; 4. same winter bear waving; 5. little penguin standing; 6. same penguin waving flippers wearing teal scarf; 7. pair of cream mittens as single grouped item; 8. single carrot; 9. round snowman with eyes mouth but NO nose; 10. same snowman with carrot nose; 11. low pine branch with fluffy snow; 12. same pine branch clear snow with round pinecones; 13. teal knitted scarf; 14. warm amber lantern; 15. plate of round cookies; 16. golden star hanging ornament. All 16 objects independent on genuine alpha transparency. Each item must fit its own cell, no touching adjoining items.",
+      "transparent": true,
+      "stage": "initial"
+    },
+    {
+      "id": "dino-atlas",
+      "source": "exec-ceb98ab7-bdde-442f-970f-70d8cfd1992a.png",
+      "prompt": "Create ONE transparent sprite sheet asset for gentle preschool watercolor storybook web game. Square 2048x2048 canvas, exact 4 columns by 4 rows of equal cells, each isolated sprite centered fully inside its cell with generous 18% empty transparent padding. No cells, grid lines, labels, text, background, shadows extending between cells. Consistent warm hand-painted watercolor, rounded plush characters, readable at small size. Rabbit has ivory fur long ears coral scarf; bear honey brown round ears cream vest. Items in strict row-major order: 1. mint green friendly rounded little dinosaur standing; 2. same dinosaur smiling waving arm; 3. same dinosaur eating a leaf; 4. same dinosaur wearing small coral backpack; 5. mint green baby dinosaur sitting; 6. same baby dinosaur happy smelling tiny flower; 7. single tender green leaf; 8. small coral backpack; 9. large fern frond; 10. single wooden bridge plank; 11. cream dinosaur egg intact; 12. open egg shell with baby dinosaur peeking out; 13. small pink flower; 14. round stone spring outlet; 15. rounded closed wooden door; 16. soft mint blanket. All 16 objects independent on genuine alpha transparency. Each item must fit its own cell, no touching adjoining items.",
+      "transparent": true,
+      "stage": "initial"
+    },
+    {
+      "id": "space-atlas",
+      "source": "exec-4b9a2173-6109-462b-9b8c-31ecaf904302.png",
+      "prompt": "Create ONE transparent sprite sheet asset for gentle preschool watercolor storybook web game. Square 2048x2048 canvas, exact 4 columns by 4 rows of equal cells, each isolated sprite centered fully inside its cell with generous 18% empty transparent padding. No cells, grid lines, labels, text, background, shadows extending between cells. Consistent warm hand-painted watercolor, rounded plush characters, readable at small size. Rabbit has ivory fur long ears coral scarf; bear honey brown round ears cream vest. Items in strict row-major order: 1. ivory rabbit coral accents child astronaut suit clear helmet standing; 2. same astronaut rabbit waving; 3. honey bear cream accents child astronaut suit standing WITHOUT helmet; 4. same astronaut bear wearing clear helmet waving; 5. friendly golden star character standing; 6. same star character waving arms; 7. cream rounded spacecraft with clear cockpit dome empty; 8. single clear astronaut helmet cream rim; 9. folded round landing mat; 10. unfolded round lavender landing mat; 11. large moon flower bud; 12. same moon flower opened softly glowing; 13. one cream envelope; 14. rounded star-shaped mailbox with slot; 15. rounded large warm bridge lamp; 16. lavender round seat cushion. All 16 objects independent on genuine alpha transparency. Each item must fit its own cell, no touching adjoining items.",
+      "transparent": true,
+      "stage": "initial"
+    },
+    {
+      "id": "forest-basket-ready",
+      "source": "exec-1899774f-9e79-4d2d-9b2a-4e42640ab075.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：forest，本关：野餐篮准备好。画面设定：家门口晨光草地，小熊在右，小兔在左期待出发，篮子在下方。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为野餐篮准备好的主交互对象保留中心(65%,64%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "forest-squirrel-guide",
+      "source": "exec-629ba54f-c9b9-4490-8202-d88f4afe1f16.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：forest，本关：松鼠来领路。画面设定：林间入口全景，松鼠站在前方，小兔小熊在后方望向它。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为松鼠来领路的主交互对象保留中心(60%,57%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "forest-leaf-path",
+      "source": "exec-0938cdfd-1543-4808-8f1d-f83fedb13e32.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：forest，本关：大叶子让路。画面设定：林间小路近景，大叶子横在平整路面，伙伴站在后方。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为大叶子让路的主交互对象保留中心(52%,62%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "forest-picnic-mat",
+      "source": "exec-1bd9c712-a8d1-4490-8f2c-74f08864f0c9.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：forest，本关：铺好野餐垫。画面设定：溪边野餐地全景，朋友分列两侧，中间是唯一草地轮廓。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为铺好野餐垫的主交互对象保留中心(50%,64%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "forest-hedgehog-apple",
+      "source": "exec-ecb7c96a-d3df-4245-afdb-a04fcea6072a.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：forest，本关：小刺猬吃苹果。画面设定：野餐垫近景，小刺猬在右，面前只有一个餐盘，伙伴在左。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为小刺猬吃苹果的主交互对象保留中心(64%,63%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "forest-flower-open",
+      "source": "exec-1fd7090a-451a-4214-8a81-03ff262116e6.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：forest，本关：野餐旁的花开啦。画面设定：野餐地边缘花丛近景，单个大花苞在中央，伙伴在旁注视。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为野餐旁的花开啦的主交互对象保留中心(52%,58%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "forest-rabbit-cup",
+      "source": "exec-dd42ec4f-0723-455c-915d-8cc1b1f9e56c.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：forest，本关：给小兔摆杯子。画面设定：餐垫中近景，小兔在右，小熊在左，唯一杯垫清楚露出。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为给小兔摆杯子的主交互对象保留中心(63%,63%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "forest-bird-song",
+      "source": "exec-5f0282ca-d172-4f06-afde-04d824d2b7d2.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：forest，本关：小鸟唱欢迎歌。画面设定：低枝与野餐地同框，小鸟在中部枝上，朋友在下方听候。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为小鸟唱欢迎歌的主交互对象保留中心(58%,45%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "forest-basket-cleanup",
+      "source": "exec-e7ef7e4a-884f-4aeb-936c-b327a0a7e637.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：forest，本关：把空餐盒收好。画面设定：傍晚野餐垫近景，开盖篮子在右，空餐盒在下方，伙伴准备收拾。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为把空餐盒收好的主交互对象保留中心(66%,62%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "forest-friends-goodbye",
+      "source": "exec-ec2142b8-a89e-47fa-b782-a82d83de5386.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：forest，本关：森林朋友再见。画面设定：夕阳林间岔口，松鼠和刺猬在前，小兔小熊朝回家方向站好。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为森林朋友再见的主交互对象保留中心(56%,57%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "snow-train-arrival",
+      "source": "exec-4fdf1073-c740-49c7-9d9d-a0d2ec3e3c63.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：snow，本关：雪地小列车到站。画面设定：雪村车站全景，车头朝左，两位伙伴在车窗里，企鹅在站台迎接。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为雪地小列车到站的主交互对象保留中心(32%,62%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "snow-bear-mittens",
+      "source": "exec-10e35b81-ca51-4b34-a054-75f5ecbdf4cd.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：snow，本关：给小熊戴手套。画面设定：雪站近景，小熊在右双手露出，小兔在左，成对手套作为一个拖动物。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为给小熊戴手套的主交互对象保留中心(64%,60%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "snow-penguin-greeting",
+      "source": "exec-410c33eb-cf71-4e69-b7e9-d499f2364f0f.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：snow，本关：小企鹅打招呼。画面设定：平坦雪地广场入口，小企鹅在中央，伙伴站在两侧看向它。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为小企鹅打招呼的主交互对象保留中心(52%,60%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "snow-snowman-nose",
+      "source": "exec-610b2bbf-7072-45ed-bdda-f0f6700a1d90.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：snow，本关：雪人装鼻子。画面设定：广场雪人近景，脸位于中央，鼻子轮廓唯一，伙伴在旁陪伴。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为雪人装鼻子的主交互对象保留中心(55%,45%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "snow-pine-snow",
+      "source": "exec-95ab021c-7d66-4a21-87c6-6e240d47fe91.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：snow，本关：松树抖抖雪。画面设定：矮松树近景，枝头雪落向右侧空地，伙伴站在左侧观赏区。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为松树抖抖雪的主交互对象保留中心(60%,47%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "snow-penguin-scarf",
+      "source": "exec-c60ff918-cffa-4ed5-bceb-7863b5eac0ec.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：snow，本关：给小企鹅围围巾。画面设定：雪屋门口企鹅近景，伙伴在左右，企鹅颈部完整可见。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为给小企鹅围围巾的主交互对象保留中心(56%,55%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "snow-lantern-glow",
+      "source": "exec-b00e509c-85b7-4b05-8851-0cbccbc663d3.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：snow，本关：雪屋灯亮啦。画面设定：暮色雪屋中景，大灯笼挂在门旁低处，伙伴站在门前注视。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为雪屋灯亮啦的主交互对象保留中心(65%,47%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "snow-snack-plate",
+      "source": "exec-899b81ff-ca32-4339-8d31-2bdd07a73b77.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：snow，本关：给朋友摆点心。画面设定：暖屋聚会近景，矮桌中央只有一个餐盘轮廓，三位朋友围坐。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为给朋友摆点心的主交互对象保留中心(52%,64%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "snow-star-decoration",
+      "source": "exec-0ac12da8-02e7-4ec9-9ee1-87ed080d6693.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：snow，本关：雪屋挂星星。画面设定：从门内看向门旁墙面近景，低挂位在右，伙伴与企鹅在旁。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为雪屋挂星星的主交互对象保留中心(65%,48%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "snow-house-goodnight",
+      "source": "exec-8901d2c7-a561-4f9c-bea2-c32030ab1c17.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：snow，本关：雪地朋友晚安。画面设定：雪屋卧室全景，三位朋友已盖被躺在宽床上，灯位于左床头。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为雪地朋友晚安的主交互对象保留中心(28%,53%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。卧室床中心位于55%,63%，宽床从25%到85%，枕头在45%高度，床铺为无人空床，角色后续叠加。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "dino-valley-greeting",
+      "source": "exec-765580fe-bcc0-4ec6-baa6-e696d32f6bef.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：dino，本关：小恐龙欢迎你。画面设定：蕨类山谷入口全景，小恐龙在右低头，两位伙伴在左看向它。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为小恐龙欢迎你的主交互对象保留中心(64%,58%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "dino-leaf-breakfast",
+      "source": "exec-d0ccc2bf-b6a2-498a-8caf-965af17921bc.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：dino，本关：小恐龙吃早餐。画面设定：山谷草地早餐近景，恐龙在右，唯一餐盘在前，伙伴在左。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为小恐龙吃早餐的主交互对象保留中心(63%,65%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "dino-backpack-ready",
+      "source": "exec-f250d95f-02d4-43e9-aba3-09f343170f53.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：dino，本关：小恐龙背小包。画面设定：侧面小恐龙近景，背部朝向镜头，伙伴站在旁边期待出发。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为小恐龙背小包的主交互对象保留中心(62%,47%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "dino-fern-path",
+      "source": "exec-c17311a9-ddf1-4475-bd1c-65ed343fa1ee.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：dino，本关：蕨叶让让路。画面设定：山谷溪边小路全景，一片大蕨叶挡在路面，朋友等在后方。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为蕨叶让让路的主交互对象保留中心(52%,59%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "dino-creek-bridge",
+      "source": "exec-bf379b4f-21b0-4cfb-b50f-bf8cacd0b162.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：dino，本关：小桥接起来。画面设定：浅溪小桥全景，横向桥面仅一个明显缺口，朋友在左岸等待。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为小桥接起来的主交互对象保留中心(53%,63%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "dino-baby-egg",
+      "source": "exec-dd9e21ff-f628-4769-88db-6558587d8bf3.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：dino，本关：恐龙宝宝探头。画面设定：河对岸柔软草窝近景，单个摇动蛋在中央，大恐龙与伙伴在旁。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为恐龙宝宝探头的主交互对象保留中心(52%,63%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "dino-baby-flower",
+      "source": "exec-1a5c1d02-a161-4569-b8d0-d5c4ac1d6a0b.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：dino，本关：送宝宝一朵花。画面设定：草窝宝宝近景，宝宝在右，大恐龙在后，伙伴在左拿出小花。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为送宝宝一朵花的主交互对象保留中心(64%,62%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "dino-waterfall-discovery",
+      "source": "exec-de9af00c-6512-4637-943e-de404e7b935c.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：dino，本关：小瀑布唱歌。画面设定：缓坡岩壁中景，圆润泉眼位于中部，下接浅溪，朋友在旁观赏。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为小瀑布唱歌的主交互对象保留中心(58%,48%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "dino-home-door",
+      "source": "exec-72bc4765-6a93-4708-ac34-027d8dc02b16.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：dino，本关：山谷小屋开门。画面设定：傍晚山谷小屋全景，大木门居中，恐龙一家与伙伴在门前。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为山谷小屋开门的主交互对象保留中心(54%,58%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "dino-baby-blanket",
+      "source": "exec-6b87be21-fa94-483e-9991-0c6d819d1ecd.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：dino，本关：恐龙宝宝盖被子。画面设定：暖屋睡床近景，宝宝平躺，成年恐龙与伙伴在床边陪伴。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为恐龙宝宝盖被子的主交互对象保留中心(55%,62%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。卧室床中心位于55%,63%，宽床从25%到85%，枕头在45%高度，床铺为无人空床，角色后续叠加。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "space-ship-launch",
+      "source": "exec-6465e5f9-d014-474b-b39e-516489db1ce1.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：space，本关：小飞船出发。画面设定：飞船驾驶舱近景，伙伴坐在座椅上，单个大按钮居中下方。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为小飞船出发的主交互对象保留中心(52%,64%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "space-star-guide",
+      "source": "exec-6d4d02d2-966b-48b8-87ac-77bb27c59c81.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：space，本关：星星朋友领路。画面设定：透过飞船窗看星云中景，星星朋友在窗外中央，伙伴在舱内注视。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为星星朋友领路的主交互对象保留中心(56%,50%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "space-bear-helmet",
+      "source": "exec-315d9d0b-100d-4e1d-9b30-6ce607cc63f2.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：space，本关：小熊戴头盔。画面设定：飞船内换装近景，小熊在右尚未出舱，小兔在左已穿好宇航服。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为小熊戴头盔的主交互对象保留中心(64%,43%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "space-landing-pad",
+      "source": "exec-8741d09a-a710-480e-858e-1441739e66f7.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：space，本关：着陆垫铺好。画面设定：从舱内遥操作视角看平坦星球，垫子代表待投放物，星星朋友在旁。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为着陆垫铺好的主交互对象保留中心(52%,65%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "space-moon-flower",
+      "source": "exec-91e3f092-f5a1-45f0-b43c-4028a21c50a2.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：space，本关：月亮花开啦。画面设定：星球花园近景，单个大花苞居中，伙伴穿宇航服站在左右。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为月亮花开啦的主交互对象保留中心(52%,58%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "space-star-mail",
+      "source": "exec-5621676b-3efe-4dd1-a191-779f015ae1e1.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：space，本关：送一封星星信。画面设定：星球邮站中景，圆润邮筒在右，伙伴在左，唯一投信口清楚。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为送一封星星信的主交互对象保留中心(65%,55%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "space-bridge-light",
+      "source": "exec-2cbeebfc-527b-48ac-8052-b81c53e26704.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：space，本关：星光小桥亮起来。画面设定：幻想星球地面小桥全景，低灯在桥头，远处聚会屋，伙伴在入口。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为星光小桥亮起来的主交互对象保留中心(35%,59%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "space-picnic-cushion",
+      "source": "exec-7d853d38-e8df-4120-8402-cc60b4870bac.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：space，本关：给星星摆坐垫。画面设定：有空气的聚会屋内近景，伙伴摘头盔围桌，星星朋友旁有唯一空位。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为给星星摆坐垫的主交互对象保留中心(65%,65%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "space-ship-home",
+      "source": "exec-d2afedbf-caf0-4975-acfa-5657f96aa138.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：space，本关：小飞船回家。画面设定：星球停机坪傍晚全景，伙伴重新穿好宇航服站在门旁，星星送别。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为小飞船回家的主交互对象保留中心(56%,57%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "space-friends-blanket",
+      "source": "exec-94835a32-6ad5-44b2-9667-9b20f0a37466.png",
+      "prompt": "绘制一张独立的3岁儿童游戏环境背景插画，竖版2:3，柔和水彩绘本，温暖光线、圆润造型、丰富景深与细节。主题：space，本关：星空旅行晚安。画面设定：回家卧室近景，伙伴穿睡衣躺在同一宽床上，窗外星空，飞船停在远处。。这是纯环境背景，所有小兔、小熊、动物、主角、操作道具均由游戏独立图层放置，本图不绘制角色、不绘制点击或拖动对象。为星空旅行晚安的主交互对象保留中心(53%,63%)的清楚空白区域，底部25%,82%留出拖动物空间。上方18%留给提示。绘制与环境相符的地面/桌面/墙面/床铺作为支撑，手机画面中央完整构图。卧室床中心位于55%,63%，宽床从25%到85%，枕头在45%高度，床铺为无人空床，角色后续叠加。不画文字、界面、按钮、箭头、轮廓提示、边框、水印，不拼贴。与该主题其他关通过不同镜头和景物区分。",
+      "transparent": false,
+      "stage": "initial"
+    },
+    {
+      "id": "forest-leaf-path",
+      "source": "exec-8dd200eb-7a97-4bfc-8ed9-c78a1c6eab3d.png",
+      "stage": "background-cleanup"
+    },
+    {
+      "id": "forest-flower-open",
+      "source": "exec-173e9b7b-38dc-44a6-875b-3fc79d000b0a.png",
+      "stage": "background-cleanup"
+    },
+    {
+      "id": "forest-basket-cleanup",
+      "source": "exec-bf77ae10-66bb-4351-865d-1ca4753e494e.png",
+      "stage": "background-cleanup"
+    },
+    {
+      "id": "snow-train-arrival",
+      "source": "exec-35b3e2ef-ebae-4f8b-a567-2052429349fe.png",
+      "stage": "background-cleanup"
+    },
+    {
+      "id": "snow-snowman-nose",
+      "source": "exec-298bb9f4-60d3-4d6a-98ad-5d2e2e99feba.png",
+      "stage": "background-cleanup"
+    },
+    {
+      "id": "snow-lantern-glow",
+      "source": "exec-db722d0e-5c09-4c82-a1e8-418c84625bb7.png",
+      "stage": "background-cleanup"
+    },
+    {
+      "id": "dino-fern-path",
+      "source": "exec-161f463e-684d-443a-83c5-293a719bda55.png",
+      "stage": "background-cleanup"
+    },
+    {
+      "id": "dino-waterfall-discovery",
+      "source": "exec-4193f990-76c4-4b06-b0d7-d3b5689e4ce0.png",
+      "stage": "background-cleanup"
+    },
+    {
+      "id": "dino-home-door",
+      "source": "exec-be0c77ea-59ea-45d4-bb26-e1bee726299b.png",
+      "stage": "background-cleanup"
+    },
+    {
+      "id": "space-landing-pad",
+      "source": "exec-1fae28b0-1a7b-410f-b46c-572acb92969d.png",
+      "stage": "background-cleanup"
+    },
+    {
+      "id": "space-moon-flower",
+      "source": "exec-e75d346f-e726-4e9f-b4c7-e27e0321685d.png",
+      "stage": "background-cleanup"
+    },
+    {
+      "id": "space-star-mail",
+      "source": "exec-e8976843-04d2-4b6e-86e1-2a9d13a93c47.png",
+      "stage": "background-cleanup"
+    },
+    {
+      "id": "space-bridge-light",
+      "source": "exec-adabd5d4-e292-4eab-8cad-1eb13fada5f8.png",
+      "stage": "background-cleanup"
+    },
+    {
+      "id": "snow-house-goodnight-complete",
+      "source": "exec-870b7311-cfb5-457d-8598-a814edcce1d0.png",
+      "stage": "sleep-state"
+    },
+    {
+      "id": "dino-baby-blanket-initial",
+      "source": "exec-e5ed7739-94c8-4778-be44-dfb8cc54fdf5.png",
+      "stage": "sleep-state"
+    },
+    {
+      "id": "dino-baby-blanket-complete",
+      "source": "exec-bc9a129b-ce8a-4677-b4cf-9d166d2e3fa0.png",
+      "stage": "sleep-state"
+    },
+    {
+      "id": "space-friends-blanket-initial",
+      "source": "exec-5a000ab6-4c20-4f62-bdd5-77e31c4d63fa.png",
+      "stage": "sleep-state"
+    },
+    {
+      "id": "space-friends-blanket-complete",
+      "source": "exec-4cd12fad-54a9-4df9-b6f0-94ad5d6470ab.png",
+      "stage": "sleep-state"
+    },
+    {
+      "id": "rest-atlas",
+      "source": "exec-7d8d222e-f5af-48c9-b54c-f40b08af27e2.png",
+      "stage": "sleep-state"
+    },
+    {
+      "id": "extra-interaction-atlas",
+      "stage": "interaction-refinement",
+      "source": "exec-bde715c4-2b4c-4a2d-bca6-37d1990f4580.png",
+      "description": "独立启动按钮、无围巾企鹅挥手、飞船开门与载客关门四图层"
+    },
+    {
+      "id": "dino-spring-dry",
+      "stage": "initial-state",
+      "source": "exec-26fea869-bdb2-42c2-9dc1-4b8d32fe6657.png",
+      "description": "泉眼初始不出水，点击切换流水图层"
+    },
+    {
+      "id": "forest-hedgehog-apple",
+      "stage": "background-cleanup",
+      "source": "exec-1231d49e-2cb6-43c0-8ee9-39dae682f3e7.png",
+      "description": "保留野餐垫，移除烘焙餐盘以使用独立餐盘"
+    },
+    {
+      "id": "forest-basket-cleanup",
+      "source": "exec-d5ed00e8-0542-4ea2-840b-dbcc06873987.png",
+      "stage": "final-background-cleanup",
+      "description": "移除重复操作对象，保持独立交互图层与丰富环境"
+    },
+    {
+      "id": "forest-flower-open",
+      "source": "exec-82285031-578d-47b5-a137-394e47bbd0ff.png",
+      "stage": "final-background-cleanup",
+      "description": "移除重复操作对象，保持独立交互图层与丰富环境"
+    },
+    {
+      "id": "forest-leaf-path",
+      "source": "exec-dc4c3fbd-910e-4904-98c3-80d0dd5c7920.png",
+      "stage": "final-background-cleanup",
+      "description": "移除重复操作对象，保持独立交互图层与丰富环境"
+    },
+    {
+      "id": "snow-train-arrival",
+      "source": "exec-80db2905-cde3-4afc-b0da-3067cc769e5b.png",
+      "stage": "final-background-cleanup",
+      "description": "移除重复操作对象，保持独立交互图层与丰富环境"
+    },
+    {
+      "id": "snow-snowman-nose",
+      "source": "exec-8887d221-a134-4bce-9522-1706a84542c2.png",
+      "stage": "final-background-cleanup",
+      "description": "移除重复操作对象，保持独立交互图层与丰富环境"
+    },
+    {
+      "id": "snow-lantern-glow",
+      "source": "exec-b2e44bc3-532e-4475-b34c-baa61e6eb649.png",
+      "stage": "final-background-cleanup",
+      "description": "移除重复操作对象，保持独立交互图层与丰富环境"
+    },
+    {
+      "id": "space-landing-pad",
+      "source": "exec-29b26b5d-8451-4e79-8f66-f0d79083e5d8.png",
+      "stage": "final-background-cleanup",
+      "description": "移除重复操作对象，保持独立交互图层与丰富环境"
+    },
+    {
+      "id": "dino-fern-path",
+      "source": "exec-74dee1d4-bded-4da2-b1e8-849c21143843.png",
+      "stage": "final-background-cleanup",
+      "description": "移除重复操作对象，保持独立交互图层与丰富环境"
+    },
+    {
+      "id": "dino-waterfall-discovery",
+      "source": "exec-38734705-8192-4665-9b2b-02dcb7a41da3.png",
+      "stage": "final-background-cleanup",
+      "description": "移除重复操作对象，保持独立交互图层与丰富环境"
+    },
+    {
+      "id": "dino-home-door",
+      "source": "exec-4bf848ae-b0b8-4e34-878a-9f013c174f20.png",
+      "stage": "final-background-cleanup",
+      "description": "移除重复操作对象，保持独立交互图层与丰富环境"
+    },
+    {
+      "id": "dino-creek-bridge",
+      "source": "exec-b7f570da-c698-442d-8792-214ad3136007.png",
+      "stage": "final-background-cleanup",
+      "description": "移除重复操作对象，保持独立交互图层与丰富环境"
+    },
+    {
+      "id": "space-moon-flower",
+      "source": "exec-f5431620-e1f7-4d38-ad2d-35546fc53201.png",
+      "stage": "final-background-cleanup",
+      "description": "移除重复操作对象，保持独立交互图层与丰富环境"
+    },
+    {
+      "id": "space-star-mail",
+      "source": "exec-d96b7e1c-4ec5-443a-bc01-32b7274d6bf0.png",
+      "stage": "final-background-cleanup",
+      "description": "移除重复操作对象，保持独立交互图层与丰富环境"
+    },
+    {
+      "id": "rest-awake-atlas",
+      "source": "exec-4541b8bf-4c52-4abd-8292-6a6cbe2c2882.png",
+      "stage": "final-prop",
+      "description": "小兔、小熊、企鹅与恐龙宝宝的卧床初始姿态"
+    },
+    {
+      "id": "space-launch-button",
+      "source": "exec-7a86ff1b-b809-48bc-b028-f899da913b03.png",
+      "stage": "final-prop",
+      "description": "圆形启动按钮"
+    },
+    {
+      "id": "dino-spring-dry",
+      "source": "exec-5a18b42f-c515-4379-97d3-97962793d26b.png",
+      "stage": "final-prop",
+      "description": "泉眼干燥初始态，操作后切换流水图层"
+    },
+    {
+      "id": "snow-bear-mittens",
+      "stage": "final-success-pose",
+      "source": "exec-69e10b29-f85d-49f6-b883-c091ecf30bdd.png",
+      "description": "小熊两只手真正戴上奶油色针织手套"
+    }
+  ]
+}

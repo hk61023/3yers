@@ -43,3 +43,7 @@ python scripts/generate-voice.py --only animal-journey-start.mp3 animal-scene-co
 ## 天空动物冒险更新（2026-10-04）
 
 天空十关提示及开场、单关完成、体验完成、旅程完成共14条录音已定向更新。保留兼容文件名，实际内容以 `scripts/generate-voice.py` 和 `docs/new-theme-voice-prompts.json` 为准；场景显示提示与录音一致。静音或播放失败仍按场景反馈计时推进。
+
+## 第三页动物冒险（2026-10-04）
+
+森林、雪地、恐龙、星空各10条提示，以及每主题开始、单关完成、旅程完成共52条新录音已定向生成。脚本与设计文案逐条对应，使用新场景ID文件名；useGameAudio接入各主题映射。静音与播放失败不阻断场景推进。

@@ -37,6 +37,8 @@ import { GardenThemeScene } from './themes/garden/GardenThemeScene'
 import { FirstThemeScene } from './themes/preview/FirstThemeScene'
 import { SkyAdventureScene } from './themes/sky/SkyAdventureScene'
 import { isSkyScene } from './themes/sky/skyScenes'
+import { AdventureScene } from './themes/adventure/AdventureScene'
+import { isAdventureScene } from './themes/adventure/adventureScenes'
 import { isFirstThemeScene } from './themes/preview/firstScenes'
 import { ExpandedThemeScene } from './themes/expanded/ExpandedThemeScene'
 import { isExpandedScene } from './themes/expanded/expandedScenes'
@@ -46,6 +48,10 @@ import { useGameAudio } from './game/audio/useGameAudio'
 import { SceneSelection, type SelectionPage } from './components/SceneSelection'
 
 const staticScreenContent = {
+  forest: { eyebrow: '森林野餐，旅程完成', title: '森林朋友都开心啦', description: '谢谢你陪小兔、小熊准备野餐，还帮助了森林朋友。', action: '再玩一次' },
+  snow: { eyebrow: '雪地朋友，旅程完成', title: '雪地朋友晚安啦', description: '谢谢你陪小兔、小熊温暖地照顾雪地朋友。', action: '再玩一次' },
+  dino: { eyebrow: '恐龙山谷，旅程完成', title: '恐龙宝宝睡着啦', description: '谢谢你陪小兔、小熊一起帮助恐龙朋友。', action: '再玩一次' },
+  space: { eyebrow: '星空探访，旅程完成', title: '星空旅行到家啦', description: '谢谢你陪小兔、小熊拜访星星朋友，平安回家。', action: '再玩一次' },
   ocean: { eyebrow: '海洋奇遇，旅程完成', title: '海底朋友都开心啦', description: '谢谢你陪海底朋友度过十个温柔的小场景。', action: '再玩一次' },
   sky: { eyebrow: '天空旅行，旅程完成', title: '天空旅行到家啦', description: '谢谢你陪小兔和小熊旅行，还帮助了天空朋友。', action: '再玩一次' },
   life: { eyebrow: '生活小帮手，旅程完成', title: '小帮手辛苦啦', description: '谢谢你完成十次暖暖的小帮忙。', action: '再玩一次' },
@@ -88,7 +94,7 @@ function App() {
   const completedSceneRef = useRef<SceneId | null>(null)
   const sceneId = flow.screen === 'scene' ? flow.sceneId : null
 
-  const { settings: audioSettings, setAudioSetting, handleFeedback, playPerformance } = useGameAudio(flow.screen === 'scene')
+  const { settings: audioSettings, setAudioSetting, handleFeedback, playPerformance } = useGameAudio(flow.screen === 'home' ? null : flow.journeyId, selectionPage === 3)
   const promptedSceneRef = useRef<SceneId | null>(null)
   const { hintVisible, onInteractionActivity } = useGentleHint({
     sceneId,
@@ -231,6 +237,7 @@ function App() {
             onStartFarm={() => handleMainAction('farm')}
             onStartGarden={() => handleMainAction('garden')}
             onStartNewTheme={handleMainAction}
+            onStartAdventure={handleMainAction}
           />
         ) : flow.screen === 'scene' ? (
           <section
@@ -285,6 +292,8 @@ function App() {
                   alt=""
                   draggable={false}
                 />
+              ) : flow.screen === 'complete' && ['forest', 'snow', 'dino', 'space'].includes(flow.journeyId) ? (
+                <img className="theme-complete-illustration" src={`/images/themes/planned/${flow.journeyId}-cover.webp`} alt="" draggable={false} />
               ) : flow.screen === 'complete' && ['ocean', 'sky', 'life', 'music'].includes(flow.journeyId) ? (
                 <img className="theme-complete-illustration" src={`/images/themes/upcoming/${flow.journeyId}-cover.webp`} alt="" draggable={false} />
               ) : (
@@ -337,6 +346,9 @@ function App() {
 }
 
 function GameScene({ sceneId, ...sceneProps }: SceneProps) {
+  if (isAdventureScene(sceneId)) {
+    return <AdventureScene key={sceneId} sceneId={sceneId} {...sceneProps} />
+  }
   if (isSkyScene(sceneId)) {
     return <SkyAdventureScene key={sceneId} sceneId={sceneId} {...sceneProps} />
   }

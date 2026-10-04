@@ -324,6 +324,18 @@ button.scene-choice {
 
 .scene-choice--new-theme { min-height: clamp(190px, 25vh, 238px); }
 
+.scene-choice--forest { background: #e8f1da; }
+.scene-choice--snow { background: #e8f3f7; }
+.scene-choice--dino { background: #edf0d7; }
+.scene-choice--space { background: #efe9f9; }
+.scene-choice--planned { display: flex; flex-direction: column; cursor: default; }
+.scene-choice--planned .scene-choice__art { position: relative; inset: auto; z-index: auto; width: 100%; aspect-ratio: 3 / 2; }
+.scene-choice--planned .scene-choice__cover { display: block; mask-image: none; object-position: center; }
+.scene-choice--planned .scene-choice__copy { width: 100%; min-height: 0; padding: 14px 16px; }
+.scene-choice--planned .scene-choice__title { margin: 0; }
+.scene-choice--planned .scene-choice__description { max-width: none; margin-bottom: 0; }
+.scene-choice__action--planned { color: #647067; background: rgb(255 255 255 / 75%); box-shadow: none; }
+
 .scene-selection__pagination {
   display: flex;
   align-items: center;

@@ -1,7 +1,60 @@
 import type { SceneId } from './sceneTypes'
 
+export type AdventureJourneyId = 'forest' | 'snow' | 'dino' | 'space'
+
 export type NewThemeJourneyId = 'ocean' | 'sky' | 'life' | 'music'
-export type JourneyId = 'car' | 'animals' | 'farm' | 'garden' | NewThemeJourneyId
+export type JourneyId = 'car' | 'animals' | 'farm' | 'garden' | NewThemeJourneyId | AdventureJourneyId
+
+const ADVENTURE_JOURNEY_ORDER: Record<AdventureJourneyId, readonly SceneId[]> = {
+  "forest": [
+    "forest-basket-ready",
+    "forest-squirrel-guide",
+    "forest-leaf-path",
+    "forest-picnic-mat",
+    "forest-hedgehog-apple",
+    "forest-flower-open",
+    "forest-rabbit-cup",
+    "forest-bird-song",
+    "forest-basket-cleanup",
+    "forest-friends-goodbye"
+  ],
+  "snow": [
+    "snow-train-arrival",
+    "snow-bear-mittens",
+    "snow-penguin-greeting",
+    "snow-snowman-nose",
+    "snow-pine-snow",
+    "snow-penguin-scarf",
+    "snow-lantern-glow",
+    "snow-snack-plate",
+    "snow-star-decoration",
+    "snow-house-goodnight"
+  ],
+  "dino": [
+    "dino-valley-greeting",
+    "dino-leaf-breakfast",
+    "dino-backpack-ready",
+    "dino-fern-path",
+    "dino-creek-bridge",
+    "dino-baby-egg",
+    "dino-baby-flower",
+    "dino-waterfall-discovery",
+    "dino-home-door",
+    "dino-baby-blanket"
+  ],
+  "space": [
+    "space-ship-launch",
+    "space-star-guide",
+    "space-bear-helmet",
+    "space-landing-pad",
+    "space-moon-flower",
+    "space-star-mail",
+    "space-bridge-light",
+    "space-picnic-cushion",
+    "space-ship-home",
+    "space-friends-blanket"
+  ]
+}
 
 const NEW_THEME_JOURNEY_ORDER: Record<NewThemeJourneyId, readonly SceneId[]> = {
   ocean: [
@@ -118,6 +171,11 @@ export const GARDEN_JOURNEY_ORDER: readonly SceneId[] = [
 
 export function getJourneySceneOrder(journeyId: JourneyId): readonly SceneId[] {
   switch (journeyId) {
+    case 'forest':
+    case 'snow':
+    case 'dino':
+    case 'space':
+      return ADVENTURE_JOURNEY_ORDER[journeyId]
     case 'ocean':
     case 'sky':
     case 'life':
@@ -135,6 +193,47 @@ export function getJourneySceneOrder(journeyId: JourneyId): readonly SceneId[] {
 }
 
 export const SCENE_DETAILS: Record<SceneId, { title: string }> = {
+  "forest-basket-ready": { title: "野餐篮准备好" },
+  "forest-squirrel-guide": { title: "松鼠来领路" },
+  "forest-leaf-path": { title: "大叶子让路" },
+  "forest-picnic-mat": { title: "铺好野餐垫" },
+  "forest-hedgehog-apple": { title: "小刺猬吃苹果" },
+  "forest-flower-open": { title: "野餐旁的花开啦" },
+  "forest-rabbit-cup": { title: "给小兔摆杯子" },
+  "forest-bird-song": { title: "小鸟唱欢迎歌" },
+  "forest-basket-cleanup": { title: "把空餐盒收好" },
+  "forest-friends-goodbye": { title: "森林朋友再见" },
+  "snow-train-arrival": { title: "雪地小列车到站" },
+  "snow-bear-mittens": { title: "给小熊戴手套" },
+  "snow-penguin-greeting": { title: "小企鹅打招呼" },
+  "snow-snowman-nose": { title: "雪人装鼻子" },
+  "snow-pine-snow": { title: "松树抖抖雪" },
+  "snow-penguin-scarf": { title: "给小企鹅围围巾" },
+  "snow-lantern-glow": { title: "雪屋灯亮啦" },
+  "snow-snack-plate": { title: "给朋友摆点心" },
+  "snow-star-decoration": { title: "雪屋挂星星" },
+  "snow-house-goodnight": { title: "雪地朋友晚安" },
+  "dino-valley-greeting": { title: "小恐龙欢迎你" },
+  "dino-leaf-breakfast": { title: "小恐龙吃早餐" },
+  "dino-backpack-ready": { title: "小恐龙背小包" },
+  "dino-fern-path": { title: "蕨叶让让路" },
+  "dino-creek-bridge": { title: "小桥接起来" },
+  "dino-baby-egg": { title: "恐龙宝宝探头" },
+  "dino-baby-flower": { title: "送宝宝一朵花" },
+  "dino-waterfall-discovery": { title: "小瀑布唱歌" },
+  "dino-home-door": { title: "山谷小屋开门" },
+  "dino-baby-blanket": { title: "恐龙宝宝盖被子" },
+  "space-ship-launch": { title: "小飞船出发" },
+  "space-star-guide": { title: "星星朋友领路" },
+  "space-bear-helmet": { title: "小熊戴头盔" },
+  "space-landing-pad": { title: "着陆垫铺好" },
+  "space-moon-flower": { title: "月亮花开啦" },
+  "space-star-mail": { title: "送一封星星信" },
+  "space-bridge-light": { title: "星光小桥亮起来" },
+  "space-picnic-cushion": { title: "给星星摆坐垫" },
+  "space-ship-home": { title: "小飞船回家" },
+  "space-friends-blanket": { title: "星空旅行晚安" },
+
   'ocean-crab-home': { title: "小螃蟹回沙窝" },
   'ocean-hermit-shell': { title: "给寄居蟹新家" },
   'ocean-starfish-turn': { title: "小海星翻个身" },

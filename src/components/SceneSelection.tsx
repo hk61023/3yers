@@ -1,8 +1,15 @@
 import { useEffect, useRef } from 'react'
-import type { NewThemeJourneyId } from '../game/flow'
+import type { AdventureJourneyId, NewThemeJourneyId } from '../game/flow'
 import './scene-selection.css'
 
-export type SelectionPage = 1 | 2
+export type SelectionPage = 1 | 2 | 3
+
+const plannedThemes = [
+  { id: 'forest', title: '森林野餐', description: '和朋友准备一场暖暖的野餐' },
+  { id: 'snow', title: '雪地朋友', description: '在软软的雪地，帮帮新朋友' },
+  { id: 'dino', title: '恐龙山谷', description: '和温柔的小恐龙一起出发' },
+  { id: 'space', title: '星空探访', description: '坐上小飞船，拜访星星朋友' },
+] as const
 
 const newThemes = [
   { id: 'ocean', title: '海洋奇遇', description: '去海里发现温柔的小惊喜' },
@@ -19,18 +26,22 @@ type SceneSelectionProps = {
   onStartFarm: () => void
   onStartGarden: () => void
   onStartNewTheme: (journeyId: NewThemeJourneyId) => void
+  onStartAdventure: (journeyId: AdventureJourneyId) => void
 }
 
-export function SceneSelection({ page, onPageChange, onStartCar, onStartAnimals, onStartFarm, onStartGarden, onStartNewTheme }: SceneSelectionProps) {
+export function SceneSelection({ page, onPageChange, onStartCar, onStartAnimals, onStartFarm, onStartGarden, onStartNewTheme, onStartAdventure }: SceneSelectionProps) {
   const previousButtonRef = useRef<HTMLButtonElement>(null)
   const nextButtonRef = useRef<HTMLButtonElement>(null)
   const lastPageRef = useRef(page)
 
   useEffect(() => {
     if (lastPageRef.current === page) return
+    // Keep the activated button focused until it reaches a disabled boundary.
+    const direction = page > lastPageRef.current ? 'next' : 'previous'
     lastPageRef.current = page
-    // The activated boundary button becomes disabled; keep focus on an enabled control.
-    const button = page === 2 ? previousButtonRef.current : nextButtonRef.current
+    const button = direction === 'next'
+      ? (page === 3 ? previousButtonRef.current : nextButtonRef.current)
+      : (page === 1 ? nextButtonRef.current : previousButtonRef.current)
     button?.focus({ preventScroll: true })
   }, [page])
 
@@ -110,7 +121,7 @@ export function SceneSelection({ page, onPageChange, onStartCar, onStartAnimals,
             </span>
           </button>
         </div>
-      ) : (
+      ) : page === 2 ? (
         <div id="theme-directory" className="scene-selection__grid" role="group" aria-label="场景选择，第2页">
           {newThemes.map((theme) => (
             <button key={theme.id} type="button" className={`scene-choice scene-choice--new-theme scene-choice--active scene-choice--${theme.id}`} onClick={() => onStartNewTheme(theme.id)} aria-label={`开始${theme.title}主题，共十个互动场景`}>
@@ -126,14 +137,30 @@ export function SceneSelection({ page, onPageChange, onStartCar, onStartAnimals,
             </button>
           ))}
         </div>
+      ) : (
+        <div id="theme-directory" className="scene-selection__grid" role="group" aria-label="场景选择，第3页">
+          {plannedThemes.map((theme) => (
+            <button key={theme.id} type="button" className={`scene-choice scene-choice--new-theme scene-choice--planned scene-choice--active scene-choice--${theme.id}`} onClick={() => onStartAdventure(theme.id)} aria-label={`开始${theme.title}主题，共十个互动场景`}>
+              <span className="scene-choice__art" aria-hidden="true">
+                <img className="scene-choice__cover" src={`/images/themes/planned/${theme.id}-cover.webp`} alt="" draggable={false} />
+              </span>
+              <span className="scene-choice__copy">
+                <span className="scene-choice__badge">10个小场景</span>
+                <span className="scene-choice__title">{theme.title}</span>
+                <span className="scene-choice__description">{theme.description}</span>
+                <span className="scene-choice__action">开始游戏 <span aria-hidden="true">➜</span></span>
+              </span>
+            </button>
+          ))}
+        </div>
       )}
 
       <nav className="scene-selection__pagination" aria-label="主题目录翻页">
-        <button ref={previousButtonRef} type="button" disabled={page === 1} onClick={() => onPageChange(1)} aria-controls="theme-directory">
+        <button ref={previousButtonRef} type="button" disabled={page === 1} onClick={() => { if (page > 1) onPageChange((page - 1) as SelectionPage) }} aria-controls="theme-directory">
           <span aria-hidden="true">←</span> 上一页
         </button>
-        <span className="scene-selection__page-status" role="status" aria-live="polite" aria-atomic="true">第{page}页 / 共2页</span>
-        <button ref={nextButtonRef} type="button" disabled={page === 2} onClick={() => onPageChange(2)} aria-controls="theme-directory">
+        <span className="scene-selection__page-status" role="status" aria-live="polite" aria-atomic="true">第{page}页 / 共3页</span>
+        <button ref={nextButtonRef} type="button" disabled={page === 3} onClick={() => { if (page < 3) onPageChange((page + 1) as SelectionPage) }} aria-controls="theme-directory">
           下一页 <span aria-hidden="true">→</span>
         </button>
       </nav>

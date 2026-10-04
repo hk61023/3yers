@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { useInstrumentPerformance } from './useInstrumentPerformance'
+import { useBackgroundMusic } from './useBackgroundMusic'
+import type { JourneyId } from '../flow'
 import type {
   GameFeedbackCue,
   GameFeedbackEvent,
@@ -22,6 +24,59 @@ const DEFAULT_SETTINGS: AudioSettings = {
 }
 
 const VOICE_FILES = {
+  "forest-basket-ready": "forest-basket-ready-hint.mp3",
+  "forest-squirrel-guide": "forest-squirrel-guide-hint.mp3",
+  "forest-leaf-path": "forest-leaf-path-hint.mp3",
+  "forest-picnic-mat": "forest-picnic-mat-hint.mp3",
+  "forest-hedgehog-apple": "forest-hedgehog-apple-hint.mp3",
+  "forest-flower-open": "forest-flower-open-hint.mp3",
+  "forest-rabbit-cup": "forest-rabbit-cup-hint.mp3",
+  "forest-bird-song": "forest-bird-song-hint.mp3",
+  "forest-basket-cleanup": "forest-basket-cleanup-hint.mp3",
+  "forest-friends-goodbye": "forest-friends-goodbye-hint.mp3",
+  "snow-train-arrival": "snow-train-arrival-hint.mp3",
+  "snow-bear-mittens": "snow-bear-mittens-hint.mp3",
+  "snow-penguin-greeting": "snow-penguin-greeting-hint.mp3",
+  "snow-snowman-nose": "snow-snowman-nose-hint.mp3",
+  "snow-pine-snow": "snow-pine-snow-hint.mp3",
+  "snow-penguin-scarf": "snow-penguin-scarf-hint.mp3",
+  "snow-lantern-glow": "snow-lantern-glow-hint.mp3",
+  "snow-snack-plate": "snow-snack-plate-hint.mp3",
+  "snow-star-decoration": "snow-star-decoration-hint.mp3",
+  "snow-house-goodnight": "snow-house-goodnight-hint.mp3",
+  "dino-valley-greeting": "dino-valley-greeting-hint.mp3",
+  "dino-leaf-breakfast": "dino-leaf-breakfast-hint.mp3",
+  "dino-backpack-ready": "dino-backpack-ready-hint.mp3",
+  "dino-fern-path": "dino-fern-path-hint.mp3",
+  "dino-creek-bridge": "dino-creek-bridge-hint.mp3",
+  "dino-baby-egg": "dino-baby-egg-hint.mp3",
+  "dino-baby-flower": "dino-baby-flower-hint.mp3",
+  "dino-waterfall-discovery": "dino-waterfall-discovery-hint.mp3",
+  "dino-home-door": "dino-home-door-hint.mp3",
+  "dino-baby-blanket": "dino-baby-blanket-hint.mp3",
+  "space-ship-launch": "space-ship-launch-hint.mp3",
+  "space-star-guide": "space-star-guide-hint.mp3",
+  "space-bear-helmet": "space-bear-helmet-hint.mp3",
+  "space-landing-pad": "space-landing-pad-hint.mp3",
+  "space-moon-flower": "space-moon-flower-hint.mp3",
+  "space-star-mail": "space-star-mail-hint.mp3",
+  "space-bridge-light": "space-bridge-light-hint.mp3",
+  "space-picnic-cushion": "space-picnic-cushion-hint.mp3",
+  "space-ship-home": "space-ship-home-hint.mp3",
+  "space-friends-blanket": "space-friends-blanket-hint.mp3",
+  "forest-start": "forest-journey-start.mp3",
+  "forest-praise": "forest-scene-complete.mp3",
+  "forest-finish": "forest-journey-complete.mp3",
+  "snow-start": "snow-journey-start.mp3",
+  "snow-praise": "snow-scene-complete.mp3",
+  "snow-finish": "snow-journey-complete.mp3",
+  "dino-start": "dino-journey-start.mp3",
+  "dino-praise": "dino-scene-complete.mp3",
+  "dino-finish": "dino-journey-complete.mp3",
+  "space-start": "space-journey-start.mp3",
+  "space-praise": "space-scene-complete.mp3",
+  "space-finish": "space-journey-complete.mp3",
+
   'ocean-crab-home': 'ocean-crab-home-hint.mp3',
   'ocean-hermit-shell': 'ocean-hermit-shell-hint.mp3',
   'ocean-starfish-turn': 'ocean-starfish-turn-hint.mp3',
@@ -165,7 +220,6 @@ const NEW_ANIMAL_HINTS: Record<string, string> = {
   'animal-giraffe': '点一点长颈鹿，帮它够树叶。',
 }
 
-const MUSIC_NOTES = [523.25, 659.25, 587.33, 523.25, 440, 523.25, 659.25, 587.33]
 
 function loadSettings(): AudioSettings {
   if (typeof window === 'undefined') return DEFAULT_SETTINGS
@@ -238,6 +292,11 @@ function getTonePattern(cue: GameFeedbackCue): {
 function getVoiceClip(event: GameFeedbackEvent): VoiceClip | null {
   switch (event.cue) {
     case 'journey-start':
+      if (event.sceneId?.startsWith('forest-')) return 'forest-start'
+      if (event.sceneId?.startsWith('snow-')) return 'snow-start'
+      if (event.sceneId?.startsWith('dino-')) return 'dino-start'
+      if (event.sceneId?.startsWith('space-')) return 'space-start'
+
       if (event.sceneId === 'animal-squirrel') return 'animal-start'
       if (event.sceneId === 'ocean-shell-pearl') return 'ocean-start'
       if (event.sceneId === 'sky-balloon-launch') return 'sky-start'
@@ -251,6 +310,11 @@ function getVoiceClip(event: GameFeedbackEvent): VoiceClip | null {
         ? event.sceneId as VoiceClip
         : null
     case 'scene-complete':
+      if (event.sceneId?.startsWith('forest-')) return 'forest-praise'
+      if (event.sceneId?.startsWith('snow-')) return 'snow-praise'
+      if (event.sceneId?.startsWith('dino-')) return 'dino-praise'
+      if (event.sceneId?.startsWith('space-')) return 'space-praise'
+
       if (event.sceneId?.startsWith('ocean-')) return 'ocean-praise'
       if (event.sceneId?.startsWith('sky-')) return 'sky-praise'
       if (event.sceneId?.startsWith('life-')) return 'life-praise'
@@ -260,6 +324,11 @@ function getVoiceClip(event: GameFeedbackEvent): VoiceClip | null {
       if (event.sceneId?.startsWith('garden-')) return 'garden-praise'
       return 'praise'
     case 'journey-complete':
+      if (event.sceneId?.startsWith('forest-')) return 'forest-finish'
+      if (event.sceneId?.startsWith('snow-')) return 'snow-finish'
+      if (event.sceneId?.startsWith('dino-')) return 'dino-finish'
+      if (event.sceneId?.startsWith('space-')) return 'space-finish'
+
       if (event.sceneId === 'ocean-shell-goodnight') return 'ocean-finish'
       if (event.sceneId === 'sky-moon-blanket') return 'sky-finish'
       if (event.sceneId === 'life-bear-blanket') return 'life-finish'
@@ -273,17 +342,19 @@ function getVoiceClip(event: GameFeedbackEvent): VoiceClip | null {
   }
 }
 
-export function useGameAudio(journeyActive: boolean) {
+export function useGameAudio(journey: JourneyId | null, thirdPage = false) {
   const [settings, setSettings] = useState<AudioSettings>(loadSettings)
   const settingsRef = useRef(settings)
   const audioContextRef = useRef<AudioContext | null>(null)
   const voiceClipsRef = useRef<Partial<Record<VoiceClip, HTMLAudioElement>>>({})
   const activeVoiceRef = useRef<VoiceClip | null>(null)
   const pendingHintRef = useRef<VoiceClip | null>(null)
-  const musicTimerRef = useRef<number | null>(null)
-  const musicIndexRef = useRef(0)
+  const [speaking, setSpeaking] = useState(false)
+  const [performing, setPerforming] = useState(false)
+  useBackgroundMusic(journey, settings.musicEnabled, speaking, performing, thirdPage)
 
   const stopVoice = useCallback(() => {
+    setSpeaking(false)
     if (typeof window !== 'undefined' && 'speechSynthesis' in window) window.speechSynthesis.cancel()
     pendingHintRef.current = null
     const active = activeVoiceRef.current
@@ -338,10 +409,6 @@ export function useGameAudio(journeyActive: boolean) {
     }
   }, [])
 
-  useEffect(() => {
-    if (!settings.voiceEnabled) stopVoice()
-  }, [settings.voiceEnabled, stopVoice])
-
   const ensureAudioContext = useCallback((): AudioContext | null => {
     if (typeof window === 'undefined' || typeof window.AudioContext === 'undefined') return null
 
@@ -357,7 +424,11 @@ export function useGameAudio(journeyActive: boolean) {
     }
   }, [])
 
-  const { playPerformance, playingRef } = useInstrumentPerformance(settings.effectsEnabled, stopVoice, ensureAudioContext)
+  const { playPerformance: playInstrument, playingRef } = useInstrumentPerformance(settings.effectsEnabled, stopVoice, ensureAudioContext)
+  const playPerformance = useCallback(async (...args: Parameters<typeof playInstrument>) => {
+    setPerforming(true)
+    try { await playInstrument(...args) } finally { if (!playingRef.current) setPerforming(false) }
+  }, [playInstrument, playingRef])
 
   const playNotes = useCallback((
     context: AudioContext,
@@ -395,32 +466,7 @@ export function useGameAudio(journeyActive: boolean) {
     })
   }, [])
 
-  const stopMusic = useCallback(() => {
-    if (musicTimerRef.current !== null) {
-      window.clearInterval(musicTimerRef.current)
-      musicTimerRef.current = null
-    }
-    musicIndexRef.current = 0
-  }, [])
-
-  const startMusic = useCallback(() => {
-    if (!settingsRef.current.musicEnabled || musicTimerRef.current !== null) return
-
-    const context = ensureAudioContext()
-    if (!context) return
-
-    const playNextNote = () => {
-      if (playingRef.current) return
-      const note = MUSIC_NOTES[musicIndexRef.current % MUSIC_NOTES.length]
-      musicIndexRef.current += 1
-      playNotes(context, [note], 0.62, 0.009, 0, 'sine')
-    }
-
-    playNextNote()
-    musicTimerRef.current = window.setInterval(playNextNote, 1_700)
-  }, [ensureAudioContext, playNotes, playingRef])
-
-  const playVoiceClip = useCallback((clip: VoiceClip) => {
+  const playVoiceClip = useCallback(function playVoiceClip(clip: VoiceClip) {
     if (!settingsRef.current.voiceEnabled) return
     const audio = voiceClipsRef.current[clip]
     if (!audio) return
@@ -455,9 +501,11 @@ export function useGameAudio(journeyActive: boolean) {
     }
 
     activeVoiceRef.current = clip
+    setSpeaking(true)
     const finish = () => {
       if (activeVoiceRef.current !== clip) return
       activeVoiceRef.current = null
+      setSpeaking(false)
       audio.onended = null
       audio.onerror = null
       const nextHint = pendingHintRef.current
@@ -513,20 +561,11 @@ export function useGameAudio(journeyActive: boolean) {
     settingsRef.current = nextSettings
     setSettings(nextSettings)
 
-    if (key === 'musicEnabled' && value && journeyActive) {
+    if (key === 'musicEnabled' && value) {
       ensureAudioContext()
     }
     if (key === 'voiceEnabled' && !value) stopVoice()
-  }, [ensureAudioContext, journeyActive, stopVoice])
-
-  useEffect(() => {
-    if (journeyActive && settings.musicEnabled) {
-      startMusic()
-      return stopMusic
-    }
-
-    stopMusic()
-  }, [journeyActive, settings.musicEnabled, startMusic, stopMusic])
+  }, [ensureAudioContext, stopVoice])
 
   return {
     settings,
