@@ -39,3 +39,7 @@ python scripts/generate-voice.py --only animal-journey-start.mp3 animal-scene-co
 # 2026-10-04 乐器提示更新
 
 音乐派对第8–10关已替换为古筝、二胡、八音盒。沿用内部文件名 `music-bear-dance-hint.mp3`、`music-note-score-hint.mp3`、`music-box-goodnight-hint.mp3`，实际内容分别为“点一点古筝，听听小旋律。”“点一点二胡，听听小旋律。”“点一点八音盒，听首晚安歌。”三条已定向重新生成并检查解码，播放映射继续对应原稳定ID。
+
+## 天空动物冒险更新（2026-10-04）
+
+天空十关提示及开场、单关完成、体验完成、旅程完成共14条录音已定向更新。保留兼容文件名，实际内容以 `scripts/generate-voice.py` 和 `docs/new-theme-voice-prompts.json` 为准；场景显示提示与录音一致。静音或播放失败仍按场景反馈计时推进。

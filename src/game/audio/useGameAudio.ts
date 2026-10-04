@@ -31,6 +31,7 @@ const VOICE_FILES = {
   'ocean-seal-ball': 'ocean-seal-ball-hint.mp3',
   'ocean-coral-door': 'ocean-coral-door-hint.mp3',
   'ocean-shell-goodnight': 'ocean-shell-goodnight-hint.mp3',
+  // Sky adventure preserves file/scene IDs; scripts now describe the animal targets.
   'sky-cloud-clear': 'sky-cloud-clear-hint.mp3',
   'sky-sun-hello': 'sky-sun-hello-hint.mp3',
   'sky-cloud-train': 'sky-cloud-train-hint.mp3',
@@ -314,7 +315,9 @@ export function useGameAudio(journeyActive: boolean) {
         const audio = new window.Audio()
         audio.preload = 'auto'
         audio.volume = 0.76
-        audio.src = `${import.meta.env.BASE_URL}audio/voice/${VOICE_FILES[clip]}`
+        // Version revised sky recordings so returning visitors hear the new targets.
+        const voiceVersion = VOICE_FILES[clip].startsWith('sky-') ? '?v=sky-adventure-20261004' : ''
+        audio.src = `${import.meta.env.BASE_URL}audio/voice/${VOICE_FILES[clip]}${voiceVersion}`
         voiceClipsRef.current[clip] = audio
         audio.load()
       } catch {

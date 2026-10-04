@@ -1,0 +1,116 @@
+.sky-adventure { position:relative; isolation:isolate; container-type:inline-size; width:100%; height:clamp(480px,68svh,700px); overflow:hidden; background:#d7f0f4; }
+.sky-adventure img { user-select:none; -webkit-user-drag:none; pointer-events:none; }
+.sky-adventure__background { position:absolute; inset:0; z-index:-2; width:100%; height:100%; }
+.sky-adventure__background img { width:100%; height:100%; object-fit:cover; }
+.sky-adventure__prompt { position:absolute; top:14px; left:50%; transform:translateX(-50%); z-index:20; width:max-content; max-width:calc(100% - 28px); padding:12px 18px; border-radius:24px; background:#fffdf4ef; text-align:center; pointer-events:none; }
+.sky-adventure__prompt h2 { font-size:clamp(1.1rem,2.5vw,1.65rem); margin:0; }
+.sky-adventure__prompt p { font-size:clamp(.82rem,1.8vw,1rem); margin:6px 0 0; }
+.sky-sprite { position:absolute; transform:translate(-50%,-50%); pointer-events:none; }
+.sky-sprite img { width:100%; height:100%; object-fit:contain; }
+.sky-balloon-group { position:absolute; left:50%; top:58%; width:48%; height:65%; transform:translate(-50%,-50%); pointer-events:none; }
+.sky-balloon-canopy { position:absolute; width:100%; height:100%; object-fit:contain; }
+.sky-balloon-friends { position:absolute; left:28%; right:28%; top:68%; height:24%; display:flex; align-items:end; }
+.sky-balloon-friends img { width:50%; height:100%; object-fit:contain; }
+.sky-basket-front { position:absolute; left:30%; bottom:1%; width:40%; height:16%; object-fit:fill; }
+.sky-balloon-group--close { top:57%; width:70%; height:49%; }
+.sky-balloon-group--close .sky-balloon-friends { left:12%; right:12%; top:0; height:70%; }
+.sky-balloon-group--close .sky-basket-front { left:5%; bottom:0; width:90%; height:46%; }
+.sky-adventure--9 .sky-balloon-group { left:43%; top:53%; width:46%; height:62%; }
+.sky-adventure--9 .sky-bear { position:relative; }
+.gentle-tap-target.sky-action { position:absolute; z-index:8; left:var(--action-x); top:var(--action-y); transform:translate(-50%,-50%); width:max(104px,24%); height:max(104px,25%); min-width:104px; min-height:104px; padding:0; border:0; background:transparent; border-radius:24px; }
+.sky-action__art { display:grid; place-items:center; width:100%; height:100%; }
+.sky-action img { width:100%; height:100%; object-fit:contain; }
+.sky-action:active { filter:brightness(1.05); }
+.sky-action--basket { width:35% !important; height:23% !important; }
+.sky-action--train { width:34% !important; height:36% !important; }
+.sky-action--rotor { width:max(104px,23%) !important; height:max(104px,25%) !important; }
+.sky-action--firefly img { filter:drop-shadow(0 0 9px #fff6bc); }
+.sky-action--firefly img { width:65%; height:65%; }
+.sky-drop { position:absolute; z-index:7; min-width:104px; min-height:104px; transform:translate(-50%,-50%); border:3px dashed #d09b63; border-radius:28px; background:#fff8e631; pointer-events:none; }
+.sky-drop img { width:100%; height:100%; object-fit:contain; opacity:.28; }
+.sky-drop--done { border:0; background:none; }
+.sky-source { position:absolute; z-index:12; left:4%; top:74%; width:max(104px,23%); height:23%; }
+.sky-source .gentle-drag-item { width:100%; height:100%; padding:0; background:transparent; border:0; border-radius:20px; }
+.sky-source img { width:100%; height:100%; object-fit:contain; }
+.sky-hinted { filter:drop-shadow(0 0 12px #ffdb78); }
+.sky-blocking-cloud { position:absolute; z-index:4; left:9%; top:32%; width:30%; height:20%; border-radius:50%; background:radial-gradient(ellipse at 40% 60%,#fff 25%,#f4fbffd9 65%,transparent 72%); box-shadow:12px -22px 0 -6px #f6fcffcc; pointer-events:none; }
+.sky-blocking-cloud--right { left:62%; top:27%; }
+.sky-train-group { position:absolute; left:10%; top:40%; width:79%; height:43%; pointer-events:none; }
+.sky-train-engine { position:absolute; left:0; width:43%; height:100%; object-fit:contain; z-index:2; }
+.sky-train-carriage { position:absolute; left:42%; width:57%; height:100%; object-fit:contain; z-index:2; }
+.sky-train-passengers { position:absolute; left:48%; top:36%; width:43%; height:28%; display:flex; z-index:1; }
+.sky-train-passengers div { width:50%; height:100%; overflow:hidden; }
+.sky-train-passengers img { width:100%; height:230%; object-fit:contain; object-position:center top; }
+.sky-moving-wheels { position:absolute; left:10%; right:7%; bottom:14%; display:flex; justify-content:space-between; z-index:3; }
+.sky-moving-wheels i { width:5cqw; height:5cqw; border:3px solid #edbf66; border-radius:50%; background:conic-gradient(transparent 0 20%,#efd393 20% 25%,transparent 25% 45%,#efd393 45% 50%,transparent 50% 70%,#efd393 70% 75%,transparent 75% 95%,#efd393 95%); animation:sky-wheel 1.2s linear infinite; }
+.sky-rainbow-bridge { position:absolute; left:15%; top:52%; width:70%; height:23%; pointer-events:none; }
+.sky-rainbow-bridge img { width:100%; height:100%; object-fit:fill; }
+.sky-bridge-gap { position:absolute; top:1%; left:36%; width:28%; height:72%; background:#e1f4fd; border:3px dashed #c39c7c; border-radius:15px; }
+.sky-bridge-gap--closed { display:none; }
+.sky-drop--rainbow-piece { top:60%; height:20% !important; }
+.sky-pinwheel-stick { position:absolute; left:49%; top:59%; width:8px; height:18%; background:#c6a276; border-radius:6px; transform:translateX(-50%); z-index:5; pointer-events:none; }
+.sky-breath { position:absolute; left:54%; top:44%; color:#d5f8ff; font-size:4rem; text-shadow:0 1px 2px #8bb2be; z-index:6; pointer-events:none; animation:sky-breathe .8s ease-in-out 3; }
+.sky-rain { position:absolute; inset:20% 0 0; z-index:4; pointer-events:none; }
+.sky-rain i { position:absolute; left:calc(5% + var(--rain-index) * 8%); top:0; width:2px; height:20px; background:#afcfdcd4; transform:rotate(12deg); animation:sky-rainfall 1.4s calc(var(--rain-index) * -0.16s) linear infinite; }
+.sky-adventure--helped.sky-adventure--7 .sky-rain { clip-path:polygon(0 0,100% 0,100% 100%,86% 100%,86% 18%,50% 18%,50% 100%,0 100%); }
+.sky-umbrella-support { position:absolute; left:77%; top:48%; width:5px; height:23%; background:#b68b67; z-index:3; pointer-events:none; }
+.sky-rain-edge { position:absolute; left:83%; top:45%; width:4px; height:45px; background:#a8cfe0; border-radius:50%; z-index:6; animation:sky-rainfall 1.1s infinite; pointer-events:none; }
+.sky-thank-you { position:absolute; top:24%; left:48%; color:#e89e92; font-size:28px; animation:sky-heart 2s ease-out both; pointer-events:none; }
+.sky-adventure--helped .sky-respond { animation:sky-happy .65s .3s ease-in-out 3; }
+.sky-adventure--helped.sky-adventure--1 .sky-balloon-group { animation:sky-launch 3.6s ease-in-out both; }
+.sky-adventure--helped.sky-adventure--2 .sky-action--bird { animation:sky-guide 3.6s ease-in-out both; }
+.sky-adventure--helped .sky-blocking-cloud--left { animation:sky-cloud-left 2s ease-in-out both; }
+.sky-adventure--helped .sky-blocking-cloud--right { animation:sky-cloud-right 2s ease-in-out both; }
+.sky-adventure--helped.sky-adventure--4 .sky-train-group { animation:sky-train-left 3.6s ease-in-out both; }
+.sky-adventure--helped .sky-crossing-rabbit { animation:sky-cross-bridge 2.5s .5s ease-in-out forwards; }
+.sky-adventure--helped .sky-post-pigeon { animation:sky-post-flight 3.6s ease-in-out both; }
+.sky-bird-shake { animation:sky-happy .5s .4s ease-in-out 3; }
+.sky-adventure--helped .sky-action--rotor img { transform-origin:50% 50%; animation:sky-wheel 1.5s .4s linear 2; }
+.sky-adventure--helped.sky-adventure--8 .sky-balloon-group { animation:sky-close-depart 3.6s ease-in-out both; }
+.sky-adventure--helped.sky-adventure--9 .sky-action--firefly { animation:sky-firefly-home 3.6s ease-in-out both; }
+.sky-adventure--helped.sky-adventure--9 .sky-action--firefly img { filter:drop-shadow(0 0 20px #fff5a5) brightness(1.1); }
+.sky-adventure--helped.sky-adventure--9 .sky-balloon-group { animation:sky-land 3.6s ease-in-out both; }
+@keyframes sky-happy { 50% { rotate:4deg; translate:0 -5px; } }
+@keyframes sky-wheel { to { rotate:-360deg; } }
+@keyframes sky-launch { 25% { transform:translate(-50%,-54%); } to { transform:translate(-50%,-72%) scale(.88); } }
+@keyframes sky-guide { 25% { translate:0 -10px; } to { translate:12cqw -20cqw; } }
+@keyframes sky-cloud-left { to { translate:-35cqw 0; opacity:.2; } }
+@keyframes sky-cloud-right { to { translate:35cqw 0; opacity:.2; } }
+@keyframes sky-train-left { 20% { translate:-2cqw 0; } to { translate:-88cqw 0; } }
+@keyframes sky-cross-bridge { 25% { translate:12cqw -5cqh; } 60% { translate:30cqw -8cqh; } to { translate:42cqw 0; } }
+@keyframes sky-post-flight { 25% { translate:0 -10px; } to { translate:25cqw -28cqw; } }
+@keyframes sky-breathe { 50% { opacity:.4; translate:-12px 0; } }
+@keyframes sky-close-depart { 75% { transform:translate(-50%,-50%); } to { transform:translate(-50%,-60%); } }
+@keyframes sky-firefly-home { 25% { translate:0 -5cqw; } to { translate:20cqw -12cqw; } }
+@keyframes sky-land { 20% { transform:translate(-50%,-50%); } to { transform:translate(0%,-28%) scale(.7); } }
+@keyframes sky-rainfall { to { translate:0 60cqh; opacity:0; } }
+@keyframes sky-heart { to { translate:0 -25px; opacity:0; } }
+@media (max-width:600px) {
+  .sky-adventure { height:clamp(480px,70svh,640px); }
+  .sky-balloon-group { width:72%; }
+  .sky-balloon-group--close { width:93%; height:40%; top:57%; }
+  .sky-adventure--9 .sky-balloon-group { width:65%; }
+  .sky-train-group { left:4%; width:92%; }
+  .sky-train-passengers { top:39%; height:25%; }
+  .sky-source { top:77%; width:30%; height:21%; }
+  .sky-drop--blanket { width:53% !important; }
+  .sky-action--basket { width:42% !important; }
+  .sky-adventure--6 .sky-post-pigeon { width:33% !important; }
+}
+.sky-friend-cloud { position:absolute; top:66%; width:24%; height:8%; border-radius:50%; background:radial-gradient(ellipse at 50% 20%,#fffdf6,#dbeaf3 80%); box-shadow:12px 4px 0 -4px #f9fbff; pointer-events:none; }
+.sky-friend-cloud--left { left:12%; }.sky-friend-cloud--right { right:10%; }
+.sky-cloud-deck { position:absolute; left:7%; top:66%; width:86%; height:9%; border-radius:50%; background:radial-gradient(ellipse at 50% 20%,#fffdf8,#dcebf4 85%); box-shadow:18px 5px 0 -5px #f1f7fc; pointer-events:none; }
+.sky-rain-shelter { position:absolute; left:8%; top:41%; width:46%; height:30%; z-index:-1; border-top:16px solid #8fbdaa; border-radius:45% 45% 0 0; pointer-events:none; }
+.sky-rain-shelter i { position:absolute; top:0; bottom:0; width:7px; background:#d7b182; }.sky-rain-shelter i:first-child { left:2%; }.sky-rain-shelter i:last-child { right:2%; }
+.sky-bird-branch { position:absolute; left:65%; top:66%; width:35%; height:9px; background:#9e7855; border-radius:50%; rotate:-8deg; transform-origin:left; pointer-events:none; }
+@media (prefers-reduced-motion:reduce) {
+  .sky-adventure *, .sky-adventure *::before, .sky-adventure *::after { animation:none !important; transition:none !important; }
+  .sky-adventure--helped.sky-adventure--1 .sky-balloon-group { transform:translate(-50%,-62%); }
+  .sky-adventure--helped .sky-blocking-cloud { opacity:0; }
+  .sky-adventure--helped .sky-crossing-rabbit { translate:42cqw 0; }
+  .sky-adventure--helped .sky-post-pigeon { translate:10cqw -13cqw; }
+  .sky-adventure--helped.sky-adventure--4 .sky-train-group { translate:-12cqw 0; }
+  .sky-adventure--helped .sky-action--rotor img { rotate:45deg; }
+  .sky-adventure--helped .sky-action--firefly { translate:12cqw -10cqw; }
+  .sky-adventure--helped.sky-adventure--9 .sky-balloon-group { transform:translate(0%,-28%) scale(.7); }
+}

@@ -35,6 +35,8 @@ import { NewAnimalScene } from './scenes/NewAnimalScene'
 import { FarmThemeScene } from './themes/farm/FarmThemeScene'
 import { GardenThemeScene } from './themes/garden/GardenThemeScene'
 import { FirstThemeScene } from './themes/preview/FirstThemeScene'
+import { SkyAdventureScene } from './themes/sky/SkyAdventureScene'
+import { isSkyScene } from './themes/sky/skyScenes'
 import { isFirstThemeScene } from './themes/preview/firstScenes'
 import { ExpandedThemeScene } from './themes/expanded/ExpandedThemeScene'
 import { isExpandedScene } from './themes/expanded/expandedScenes'
@@ -45,7 +47,7 @@ import { SceneSelection, type SelectionPage } from './components/SceneSelection'
 
 const staticScreenContent = {
   ocean: { eyebrow: '海洋奇遇，旅程完成', title: '海底朋友都开心啦', description: '谢谢你陪海底朋友度过十个温柔的小场景。', action: '再玩一次' },
-  sky: { eyebrow: '天空旅行，旅程完成', title: '天空旅行到家啦', description: '谢谢你陪小气球看过十个天空小惊喜。', action: '再玩一次' },
+  sky: { eyebrow: '天空旅行，旅程完成', title: '天空旅行到家啦', description: '谢谢你陪小兔和小熊旅行，还帮助了天空朋友。', action: '再玩一次' },
   life: { eyebrow: '生活小帮手，旅程完成', title: '小帮手辛苦啦', description: '谢谢你完成十次暖暖的小帮忙。', action: '再玩一次' },
   music: { eyebrow: '音乐派对，旅程完成', title: '音乐朋友晚安啦', description: '谢谢你和音乐朋友玩过十个开心的小场景。', action: '再玩一次' },
   car: {
@@ -335,6 +337,9 @@ function App() {
 }
 
 function GameScene({ sceneId, ...sceneProps }: SceneProps) {
+  if (isSkyScene(sceneId)) {
+    return <SkyAdventureScene key={sceneId} sceneId={sceneId} {...sceneProps} />
+  }
   if (isExpandedScene(sceneId)) {
     return <ExpandedThemeScene key={sceneId} sceneId={sceneId} {...sceneProps} />
   }

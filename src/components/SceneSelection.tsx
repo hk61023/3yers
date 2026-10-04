@@ -6,7 +6,7 @@ export type SelectionPage = 1 | 2
 
 const newThemes = [
   { id: 'ocean', title: '海洋奇遇', description: '去海里发现温柔的小惊喜' },
-  { id: 'sky', title: '天空旅行', description: '坐上小气球，看看天空' },
+  { id: 'sky', title: '天空旅行', description: '和小兔、小熊一起，去天空认识朋友' },
   { id: 'life', title: '生活小帮手', description: '小小的帮忙，暖暖的快乐' },
   { id: 'music', title: '音乐派对', description: '点出小旋律，和朋友摇一摇' },
 ] as const
@@ -115,7 +115,7 @@ export function SceneSelection({ page, onPageChange, onStartCar, onStartAnimals,
           {newThemes.map((theme) => (
             <button key={theme.id} type="button" className={`scene-choice scene-choice--new-theme scene-choice--active scene-choice--${theme.id}`} onClick={() => onStartNewTheme(theme.id)} aria-label={`开始${theme.title}主题，共十个互动场景`}>
               <span className="scene-choice__art" aria-hidden="true">
-                <img className="scene-choice__cover" src={`/images/themes/upcoming/${theme.id}-cover.webp`} alt="" draggable={false} />
+                <img className="scene-choice__cover" src={theme.id === 'sky' ? '/images/themes/sky/adventure/cover.webp' : `/images/themes/upcoming/${theme.id}-cover.webp`} alt="" draggable={false} />
               </span>
               <span className="scene-choice__copy">
                 <span className="scene-choice__badge scene-choice__badge--active">十个轻松小场景</span>
